@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>36T Paribahan-</title>
+    <!-- daisy UI & tailwind setup -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Style sheet setup -->
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
-    
+
+<body class="container mx-auto">
+    <header>
+        <!-- Nav bar section -->
+        <div class="navbar bg-base-100 font-raleway lg:mt-14">
+            <div class="navbar-start text-lg">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li><a>About</a></li>
+                  <li><a>Destination</a></li>
+                  <li><a>Search</a></li>
+                </ul>
+              </div>
+              <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+              <h1 class="font-raleway text-xl lg:text-4xl font-extrabold">36T-Ticket</h1>
+            </div>
+            <div class="navbar-center hidden lg:flex text-lg">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100] text-base lg:text-xl font-bold px-7"> Bus
+                <img src="images/bus-icon.png" alt="" class="h-6 w-6">
+              </a>
+            </div>
+          </div>
+        <!-- Hero section -->
+        <div class="hero min-h-[550px] rounded-[32px] mt-5 lg:mt-10" style="background-image: url(./images/banner.png);">
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-2xl">
+                <h1 class="mb-4 text-6xl font-extrabold text-white leading-[86px]">End-to-End Travel with <br><span class="text-[#1DD100]">P Paribahan</span></h1>
+                <p class="mb-5 font-inter text-lg leading-7">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <button class="btn bg-[#1DD100] border-0 font-raleway">Buy Tickets</button>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main class="text-center lg:mt-[180px] ">
+        <h2 class="font-raleway text-4xl font-bold">Best offers for you</h2>
+        <div class="coupon font-inter lg:mt-12 flex lg:flex-row gap-6 lg:p-14">
+            <div class="card w-1/2 flex lg:flex-row bg-[#FFBF0F] text-primary-content text-black">
+                <div class="card-body justify-center items-center">
+                  <div>
+                    <h2 class="card-title font-black text-4xl">15% OFF</h2>
+                    <span class="font-semibold text-xl">on your next purchase</span><br>
+                    <span class="text-lg">use by January 2024</span>
+                  </div>
+                </div>
+                <img src="./images/cupon-devider.png" alt="">
+                <div class="card-body justify-center items-center">
+                  <h2 class="card-title text-3xl font-bold">NEW15</h2>
+                  <span class="text-xl">Coupon Code</span>  
+                </div>
+            </div>
+            <div class="card w-1/2 flex lg:flex-row bg-[#F78C9C] text-primary-content text-black">
+                <div class="card-body justify-center items-center">
+                  <div>
+                    <h2 class="card-title font-black text-4xl">20% OFF</h2>
+                    <span class="font-semibold text-xl">on your next purchase</span><br>
+                    <span class="text-lg">use by January 2024</span>
+                  </div>
+                </div>
+                <img src="./images/cupon-devider.png" alt="">
+                <div class="card-body justify-center items-center">
+                  <h2 class="card-title text-3xl font-bold">Couple20</h2>
+                  <span class="text-xl">Coupon Code</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-outline btn-[#1DD100] text-xl text-[#1DD100] font-bold">See All Offers</button>
+    </main>
+    <main class="lg:mt-32">
+        <div class="bg-[#F7F8F8] border-[#1DD100] lg:pt-24">
+            <h2 class="font-raleway text-4xl font-bold">36T Paribahan</h2>
+        </div>
+    </main>
 </body>
+<footer></footer>
 </html>
