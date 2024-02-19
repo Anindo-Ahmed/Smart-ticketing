@@ -1,5 +1,6 @@
 const seats = document.getElementsByClassName('seat-no')
 let count = 0;
+let price = 0;
 for(let seat of seats){
     seat.addEventListener('click', function(event){
         const ticketCount = document.getElementById('ticket-count');
@@ -8,7 +9,6 @@ for(let seat of seats){
         const ticket = parseInt(ticketCount.innerText);
         count = count + 1;
 
-        
         // set the value of purchased ticket
         ticketCount.innerText = count;
         
@@ -37,8 +37,17 @@ for(let seat of seats){
         p3.innerText = 550;
         ticketPrice.appendChild(p3);
 
+         // set total price
+        price = parseInt(ticketPrice.innerText) + price;
+        document.getElementById('total-price').innerText = price;
+
+        // set grand total price
+        const grandTotal = document.getElementById('grand-total');
+        const grandTotalElement = document.createElement('p');
+        grandTotalElement.innerText = document.getElementById('total-price').innerText;
+        grandTotal.appendChild(grandTotalElement);
         
-        
+        grandTotal.innerText = document.getElementById('total-price').innerText;
     })
     
 
