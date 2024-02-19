@@ -42,6 +42,7 @@ for(let seat of seats){
         document.getElementById('total-price').innerText = price;
 
         // set grand total price
+
         const grandTotal = document.getElementById('grand-total');
         const grandTotalElement = document.createElement('p');
         grandTotalElement.innerText = document.getElementById('total-price').innerText;
@@ -50,5 +51,24 @@ for(let seat of seats){
         grandTotal.innerText = document.getElementById('total-price').innerText;
     })
     
-
 }
+
+document.getElementById('button').addEventListener('click', function(){
+    const inputCoupon = document.getElementById('coupon');
+    const couponCode = inputCoupon.value;
+
+    if(couponCode === 'NEW15'){
+        discountPrice = price * 0.15;
+        const afterDiscountedPrice = price - discountPrice;
+        const grandTotalElemnt = document.getElementById('grand-total');
+        grandTotalElemnt.innerText = afterDiscountedPrice;  
+    }
+    else if(couponCode === 'Coupon 20'){
+        discountPrice = price * 0.20;
+        const afterDiscountedPrice = price - discountPrice;
+        const grandTotalElemnt = document.getElementById('grand-total');
+        grandTotalElemnt.innerText = afterDiscountedPrice;
+        
+    }
+    document.getElementById('coupon-codes').classList.add('hidden');
+})
