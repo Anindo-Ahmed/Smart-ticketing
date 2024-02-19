@@ -1,4 +1,4 @@
-const seats = document.getElementsByClassName('seat-no')
+const seats = document.getElementsByClassName('seat-no');
 let count = 0;
 let price = 0;
 for(let seat of seats){
@@ -49,6 +49,11 @@ for(let seat of seats){
         grandTotal.appendChild(grandTotalElement);
         
         grandTotal.innerText = document.getElementById('total-price').innerText;
+
+        if(price > 2200){
+            alert('You have already purchased 4 tickets!')
+            
+        }
     })
     
 }
@@ -67,8 +72,15 @@ document.getElementById('button').addEventListener('click', function(){
         discountPrice = price * 0.20;
         const afterDiscountedPrice = price - discountPrice;
         const grandTotalElemnt = document.getElementById('grand-total');
-        grandTotalElemnt.innerText = afterDiscountedPrice;
-        
+        grandTotalElemnt.innerText = afterDiscountedPrice;  
     }
     document.getElementById('coupon-codes').classList.add('hidden');
 })
+
+const userName = document.getElementById('name').addEventListener('keyup', function(event){
+    const name = event.target.value;
+    const successBtn = document.getElementById('success-btn');
+    if(name === name){
+        successBtn.removeAttribute('disabled');
+    }
+});
